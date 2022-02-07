@@ -76,4 +76,4 @@ length' xs = sum [1 | _<-xs] -- custom version of length, the input is a string 
 removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']] -- the character will be included in the new list only if it's an element of the list ['A'..'Z']
 
 
-
+listInAList = [[1..5], [1..6]]
