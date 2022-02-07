@@ -60,3 +60,20 @@ predicatedList = [x*2 | x<-[1..50], x*2>55, x*2<80, mod x 3 ==0]
 
 
 replaceOddsWithBoomEvensWithBang = [ if odd x then "boom" else "" |  x<-[1..100]]
+
+-- A list produced by comprehension of two lists 
+twoListsProduct = [x*y | x<-[1,2,3], y<-[1,2,3]] --[1,2,3,2,4,6,3,6,9] 
+
+conditionsInTwoListProduct = [x*y | x<-[1,2,3], y<-[1,2,3], x+y>3]
+
+-- Combining strings from two lists
+nouns = ["hobo","frog","pope"]
+adjectives = ["lazy","grouchy","scheming"]
+nounsPlusAdjectives = [adjective ++" "++ noun | adjective <- adjectives, noun <- nouns]
+
+length' xs = sum [1 | _<-xs] -- custom version of length, the input is a string and here it replaces all the characters whatever they maybe with _ and then adds them up
+
+removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']] -- the character will be included in the new list only if it's an element of the list ['A'..'Z']
+
+
+
